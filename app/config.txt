@@ -1,0 +1,18 @@
+styling
+name: {
+    flex: x,
+    width: x,
+    height: x,
+    alignSelf: "x",
+    alignContent: "x",
+    justifyContent: "x",
+    backgroundColor: "x",
+    color: "x"
+    marginVertical: x,
+    marginHorizontal: x,
+    marginTop: x,
+    marginBottom: x,
+    marginLeft: x,
+    marginRight: x,
+
+}
