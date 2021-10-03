@@ -1,36 +1,86 @@
-import * as React from 'react';
-import { Button, View } from 'react-native';
-import { createDrawerNavigator } from '@react-navigation/drawer';
-import { NavigationContainer } from '@react-navigation/native';
+import React from "react"
+import {
+  View,
+  StyleSheet,
+  Image,
+  Text,
+  TouchableOpacity,
+  SafeAreaView,
+  Dimensions
+} from "react-native"
 
-function HomeScreen({ navigation }) {
+const { height, width } = Dimensions.get("window")
+
+function App() {
   return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Button
-        onPress={() => navigation.navigate('Notifications')}
-        title="Go to notifications"
-      />
-    </View>
-  );
+    <SafeAreaView>
+      <View style={styles.main}>
+        <View style={styles.header}>
+          <View style={styles.logoContainer}>
+            <TouchableOpacity>
+              <Image source={require("./assets/NIFT-n.png")} />
+            </TouchableOpacity>
+          </View>
+          <View>
+
+          </View>
+          <View>
+            <TouchableOpacity>
+              <Text>
+                ABOUT US
+              </Text>
+            </TouchableOpacity>
+            <TouchableOpacity>
+              <Text>
+                FUNDRAISING
+              </Text>
+            </TouchableOpacity>
+            <TouchableOpacity>
+              <Text>
+                THE TEAM
+              </Text>
+            </TouchableOpacity>
+            <TouchableOpacity>
+              <Text>
+                THE TECH
+              </Text>
+            </TouchableOpacity>
+          </View>
+        </View>
+        <View>
+
+        </View>
+        <View>
+
+        </View>
+      </View>
+    </SafeAreaView>
+  )
 }
 
-function NotificationsScreen({ navigation }) {
-  return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Button onPress={() => navigation.goBack()} title="Go back home" />
-    </View>
-  );
-}
+export default App;
 
-const Drawer = createDrawerNavigator();
-
-export default function App() {
-  return (
-    <NavigationContainer>
-      <Drawer.Navigator initialRouteName="Home">
-        <Drawer.Screen name="Home" component={HomeScreen} />
-        <Drawer.Screen name="Notifications" component={NotificationsScreen} />
-      </Drawer.Navigator>
-    </NavigationContainer>
-  );
-}
+const styles = StyleSheet.create({
+  header: {
+    width: '100%',
+    height: 70,
+    alignSelf: 'flex-start',
+    justifyContent: 'space-evenly',
+    backgroundColor: 'blue',
+    //marginVertical: ,
+    //marginHorizontal: ,
+    //marginTop: ,
+    //marginBottom: ,
+    //marginLeft: ,
+    //marginRight: ,
+  },
+  logoContainer: {
+    height: 50,
+    width: 50
+  },
+  main: {
+    width: '100%',
+    height: height,
+    alignItems: 'center',
+  },
+})

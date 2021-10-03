@@ -141,62 +141,76 @@ parent: {
 
 
 
-
-
-
-
 ####################################################################################
-import React from 'react';
-import { isMobile } from 'react-device-detect';
-import {
-    StyleSheet,
-    Text,
-    View,
-    TouchableOpacity,
-    Image,
-    SafeAreaView,
-    Dimensions,
-    Platform
-
-} from 'react-native';
-import { FontAwesome5 } from "expo-vector-icons"
-import 'react-native-gesture-handler';
-import { createDrawerNavigator } from '@react-navigation/drawer';
-import { Navigation } from 'react-native-navigation';
-
-const { height, width } = Dimensions.get("screen")
-const newWidth = width * 0.9
 
 
-const menu = {)
+"node_modules/react-native-safe-area-context": {
+    "version": "3.2.0",
+        "resolved": "https://registry.npmjs.org/react-native-safe-area-context/-/react-native-safe-area-context-3.2.0.tgz",
+            "integrity": "sha512-k2Nty4PwSnrg9HwrYeeE+EYqViYJoOFwEy9LxL5RIRfoqxAq/uQXNGwpUg2/u4gnKpBbEPa9eRh15KKMe/VHkA==",
+                "peerDependencies": {
+        "react": "*",
+            "react-native": "*"
+    } 12088
 
 
-    export default function App() {
-        return (
-            <SafeAreaView>
-                <View style={styles.header}>
-                    <View>
-                        <TouchableOpacity>
 
-                        </TouchableOpacity>
+
+
+
+
+    ####################################################################################
+    import React from 'react';
+    import { isMobile } from 'react-device-detect';
+    import {
+        StyleSheet,
+        Text,
+        View,
+        TouchableOpacity,
+        Image,
+        SafeAreaView,
+        Dimensions,
+        Platform
+
+    } from 'react-native';
+    import { FontAwesome5 } from "expo-vector-icons"
+    import 'react-native-gesture-handler';
+    import { createDrawerNavigator } from '@react-navigation/drawer';
+    import { Navigation } from 'react-native-navigation';
+
+    const { height, width } = Dimensions.get("screen")
+    const newWidth = width * 0.9
+
+
+    const menu = {)
+
+
+        export default function App() {
+            return (
+                <SafeAreaView>
+                    <View style={styles.header}>
+                        <View>
+                            <TouchableOpacity>
+
+                            </TouchableOpacity>
+                        </View>
+                        <View>
+
+                        </View>
+                        <View>
+                            <TouchableOpacity style={{ alignItems: "flex-end", margin: 16 }}
+                                onPress={Navigation.createDrawerNavigator(
+                                )}>
+                                <FontAwesome5 name="bars" size={24} color="#FF206E" />
+                            </TouchableOpacity>
+                        </View>
                     </View>
-                    <View>
+                    <View style={styles.main}>
 
                     </View>
-                    <View>
-                        <TouchableOpacity style={{ alignItems: "flex-end", margin: 16 }}
-                            onPress={Navigation.createDrawerNavigator(
-                            )}>
-                            <FontAwesome5 name="bars" size={24} color="#FF206E" />
-                        </TouchableOpacity>
-                    </View>
-                </View>
-                <View style={styles.main}>
+                </SafeAreaView>
 
-                </View>
-            </SafeAreaView>
-
-        )
+            )
 }
 
 const styles = StyleSheet.create({
@@ -258,3 +272,58 @@ export default function App() {
   );
 }*/
 
+//expo verison ~42.0.1"
+
+
+
+
+
+
+####################################################################################
+
+import * as React from 'react';
+import { Button, View, StyleSheet } from 'react-native';
+import { createDrawerNavigator } from '@react-navigation/drawer';
+import { NavigationContainer } from '@react-navigation/native';
+
+function HomeScreen({ navigation }) {
+    return (
+        <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+            <Button
+                onPress={() => navigation.navigate('Notifications')}
+                title="Go to notifications"
+            />
+        </View>
+    );
+}
+
+function NotificationsScreen({ navigation }) {
+    return (
+        <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+            <Button onPress={() => navigation.goBack()} title="Go back home" />
+        </View>
+    );
+}
+
+const Drawer = createDrawerNavigator();
+
+export default function App() {
+    return (
+        <View style={styles.header}>
+            <View>
+
+            </View>
+            <View>
+
+            </View>
+            <View>
+                <NavigationContainer>
+                    <Drawer.Navigator initialRouteName="Home">
+                        <Drawer.Screen name="Home" component={HomeScreen} />
+                        <Drawer.Screen name="Notifications" component={NotificationsScreen} />
+                    </Drawer.Navigator>
+                </NavigationContainer>
+            </View>
+        </View>
+    );
+}
