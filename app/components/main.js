@@ -38,20 +38,28 @@ export default class Main extends React.Component {
                                 </Text>
                                 </View>
                             </View>
-                            <View style={styles.card}>
-                                <View style={styles.cardImage}>
-                                    <Image resizeMode="cover" style={styles.cardImage}
-                                        source={require("../../assets/socialMedia.png")} />
-                                </View>
+                            <View style={styles.cardVert}>
                                 <View style={styles.cardText}>
                                     <Text style={styles.cardTextTitle}>
-                                        Own Your Content
+                                        Create. Explore. Earn.
                                     </Text>
                                     <Text style={styles.cardTextSubtext}>
-                                        Today and every day, billions of people post, share, interact with, and
-                                        promote content. Let's make tomorrow a new day by taking back ownership of content
-                                        through digital asset creation.. NFTs. You deserve to own the content you produce.
-                                </Text>
+                                        First and foremost, NIFT exhists to be a place where you can create content. NFTs
+                                        are unattainable to the average social media user. If it isn't the lack of knowledge,
+                                        its the minting costs. Creating an NFT and seeing existing NFTs should be
+                                        as simple as posting a piece of content. Thats why we're here.
+                                    </Text>
+                                </View>
+                                <View style={styles.cardVertImage}>
+                                    <Image resizeMode="contain" style={styles.cardImage}
+                                        source={require("../../assets/rocket.png")} />
+                                </View>
+                                <View style={styles.cardText}>
+                                    <Text style={styles.cardTextSubtext}>
+                                        We need a breakthrough in NFT blockchain tech. Currently, minting is simple but inaccessable
+                                        which should tell us as a community of devs that there is an issue with the current minting system.
+                                        So, minting costs = FREE, trade fees = MINIMAL, minting = BUILT IN, and accessability = SIMPLIFIED
+                                    </Text>
                                 </View>
                             </View>
                         </View>
@@ -72,8 +80,8 @@ export default class Main extends React.Component {
                             <View style={styles.cardText}>
                                 <Text style={styles.cardTextTitle}>
                                     Own Your Content
-                                    </Text>
-                                <Text>
+                                </Text>
+                                <Text style={styles.cardTextSubtext}>
                                     Today and every day, billions of people post, share, interact with, and
                                     promote content. Let's make tomorrow a new day by taking back ownership of content
                                     through digital asset creation.. NFTs. You deserve to own the content you produce.
@@ -81,25 +89,15 @@ export default class Main extends React.Component {
                             </View>
                         </View>
                         <View style={styles.card}>
-                            <View style={styles.cardImage}>
-                                <LottieView source={require('../lottie/socialMedia.json')}
-                                    autoPlay={false} />
-                            </View>
                             <View style={styles.cardText}>
                                 <Text style={styles.cardTextTitle}>
-                                    Own Your Content
-                                    </Text>
-                                <Text>
-                                    Today and every day, billions of people post, share, interact with, and
-                                    promote content. Let's make tomorrow a new day by taking back ownership of content
-                                    through digital asset creation.. NFTs. You deserve to own the content you produce.
+                                    Create. Explore. Earn.
                                 </Text>
-                            </View>
-                        </View>
-                        <View style={styles.card}>
-                            <View>
-                                <Text></Text>
-                                <Text></Text>
+                                <Text style={styles.cardTextSubtext}>
+                                    First and foremost, NIFT exhists to be a place where you can create content. NFTs
+                                    are unattainable to the average social media user. If it isn't the lack of knowledge,
+                                    its the minting costs.
+                                </Text>
                             </View>
                         </View>
                     </View>
@@ -143,6 +141,19 @@ const styles = StyleSheet.create({
         marginHorizontal: platformOS === "ios" | "android" ? 0 : 10,
         backgroundColor: "white"
     },
+    cardVert: {
+        //flexDirection: platformOS === "ios" | "android" ? "column" : "column",
+        width: platformOS === "ios" | "android" ? width - 30 : width - 50,
+        height: platformOS === "ios" | "android" ? "auto" : "auto",
+        borderWidth: 1,
+        borderColor: "#e6e6fa",
+        borderRadius: 15,
+        justifyContent: "space-evenly",
+        alignItems: "center",
+        marginVertical: 10,
+        marginHorizontal: platformOS === "ios" | "android" ? 0 : 10,
+        backgroundColor: "white"
+    },
     cardText: {
         flex: 1,
         width: "100%",
@@ -154,15 +165,28 @@ const styles = StyleSheet.create({
         fontSize: platformOS === "ios" | "android" ? 30 : 40,
         fontWeight: "600",
         marginBottom: platformOS === "ios" | "android" ? 0 : 40,
+        marginTop: 20,
+        color: "#9898ff"
     },
     cardTextSubtext: {
         fontSize: platformOS === "ios" | "android" ? 24 : 34,
         fontWeight: "400",
-        textAlign: "center"
+        textAlign: "center",
+        marginHorizontal: 5,
+        marginBottom: 5,
+        marginTop: platformOS === "ios" | "android" ? 0 : -30
     },
     cardImage: {
         flex: 2,
         width: platformOS === "ios" | "android" ? "100%" : "800",
+        height: platformOS === "ios" | "android" ? 250 : 560,
+        borderRadius: 10,
+        marginVertical: 10
+        //backgroundColor: "orange"
+    },
+    cardVertImage: {
+        flex: 2,
+        width: platformOS === "ios" | "android" ? "100%" : "100%",
         height: platformOS === "ios" | "android" ? 250 : 560,
         borderRadius: 10,
         marginVertical: 10
