@@ -4,11 +4,14 @@ import {
   Dimensions,
   StyleSheet
 } from "react-native"
+import { NavigationContainer } from '@react-navigation/native'
+import { createNativeStackNavigator } from '@react-navigation/native-stack'
 
 const { height, width } = Dimensions.get("window")
+const Stack = createNativeStackNavigator();
+
 import HeaderComponent from "./app/components/header"
 import Main from "./app/components/main"
-import LottieView from "lottie-react-native"
 
 
 export default function App() {
