@@ -5,15 +5,19 @@ import {
     Image,
     Text,
     TouchableOpacity,
-    SafeAreaView,
     Dimensions,
     ScrollView,
     Platform
 } from "react-native"
+import SearchComponent from "./searchBar";
+import 'react-native-gesture-handler';
+
+
+
 
 
 const { height, width } = Dimensions.get("window");
-import SearchComponent from "./searchBar";
+
 
 export default class Header extends React.Component {
     render() {
@@ -27,7 +31,7 @@ export default class Header extends React.Component {
                         </TouchableOpacity>
                         <Text style={styles.buttonText}>
                             OWN YOUR CONTENT
-                          </Text>
+                        </Text>
                     </View>
                     <SearchComponent>
                     </SearchComponent>
@@ -35,22 +39,22 @@ export default class Header extends React.Component {
                         <TouchableOpacity style={styles.headerButton}>
                             <Text style={styles.buttonText}>
                                 ABOUT US
-                              </Text>
+                            </Text>
                         </TouchableOpacity>
                         <TouchableOpacity style={styles.headerButton}>
                             <Text style={styles.buttonText}>
                                 FUNDRAISING
-                              </Text>
+                            </Text>
                         </TouchableOpacity>
                         <TouchableOpacity style={styles.headerButton}>
                             <Text style={styles.buttonText}>
                                 THE TEAM
-                              </Text>
+                            </Text>
                         </TouchableOpacity>
                         <TouchableOpacity style={styles.headerButton}>
                             <Text style={styles.buttonText}>
                                 THE TECH
-                              </Text>
+                            </Text>
                         </TouchableOpacity>
                         <TouchableOpacity style={styles.headerButton}>
                             <Text style={styles.buttonText}>
