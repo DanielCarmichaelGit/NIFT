@@ -11,7 +11,6 @@ import {
 } from 'react-native'
 import Footer from "./footer"
 import LottieView from 'lottie-react-native';
-import { BackgroundImage } from 'react-native-elements/dist/config';
 
 const platformOS = Platform.OS
 const { height, width } = Dimensions.get("window")
@@ -28,14 +27,14 @@ export default class Main extends React.Component {
                                     <View style={{ alignSelf: "center" }}>
                                         <Text style={styles.cardTextTitle}>
                                             Heres Why We Exist
-                                    </Text>
+                                        </Text>
                                     </View>
                                 </View>
                                 <View style={styles.cardBoxCardVert}>
                                     <View style={styles.cardText}>
                                         <Text style={styles.cardTextTitle}>
                                             $338 Million Market Cap
-                                    </Text>
+                                        </Text>
                                         <Text style={styles.cardTextSubtext}>
                                             The current NFT market is measured in trade volume and not content creation.
                                             However, increasing content volume increases trade volume.
@@ -53,7 +52,7 @@ export default class Main extends React.Component {
                                     <View style={styles.cardText}>
                                         <Text style={{ ...styles.cardTextSubtext, color: "gold", fontSize: 26, marginBottom: 30 }}>
                                             ACCESSABILITY = GROWTH
-                                    </Text>
+                                        </Text>
                                     </View>
                                 </View>
                                 <View style={styles.cardBoxCardVert}>
@@ -64,7 +63,7 @@ export default class Main extends React.Component {
                                     <View style={styles.cardText}>
                                         <Text style={styles.cardTextTitle}>
                                             Own Your Content
-                                    </Text>
+                                        </Text>
                                         <Text style={styles.cardTextSubtext}>
                                             Today and every day, billions of people post, share, interact with, and
                                             promote content. Let's make tomorrow a new day by taking back ownership of content
@@ -80,7 +79,7 @@ export default class Main extends React.Component {
                                     <View style={styles.cardText}>
                                         <Text style={styles.cardTextTitle}>
                                             Own Your Content
-                                    </Text>
+                                        </Text>
                                         <Text style={styles.cardTextSubtext}>
                                             Today and every day, billions of people post, share, interact with, and
                                             promote content. Let's make tomorrow a new day by taking back ownership of content
@@ -102,7 +101,7 @@ export default class Main extends React.Component {
                                         Today and every day, billions of people post, share, interact with, and
                                         promote content. Let's make tomorrow a new day by taking back ownership of content
                                         through digital asset creation.. NFTs. You deserve to own the content you produce.
-                                </Text>
+                                    </Text>
                                 </View>
                             </View>
                         </View>
@@ -161,7 +160,7 @@ const styles = StyleSheet.create({
         height: "auto",
         width: width,
         backgroundColor: "white",
-        backgroundColor: "#e6e6fa"
+        //backgroundColor: "#e6e6fa"
     },
     cardContainer: {
         width: width - 30,
@@ -174,7 +173,7 @@ const styles = StyleSheet.create({
     card: {
         flexDirection: platformOS === "ios" | "android" ? "column" : "row",
         width: platformOS === "ios" | "android" ? width - 30 : width - 50,
-        height: platformOS === "ios" | "android" ? "auto" : "auto",
+        //height: platformOS === "ios" | "android" ? "auto" : "auto",
         borderWidth: 1,
         borderColor: "#e6e6fa",
         borderRadius: 15,
@@ -186,8 +185,8 @@ const styles = StyleSheet.create({
     },
     cardVert: {
         //flexDirection: platformOS === "ios" | "android" ? "column" : "column",
-        width: platformOS === "ios" | "android" ? "auto" : "auto",
-        height: platformOS === "ios" | "android" ? "auto" : "auto",
+        //width: platformOS === "ios" | "android" ? "auto" : "auto",
+        //height: platformOS === "ios" | "android" ? "auto" : "auto",
         borderWidth: 1,
         borderColor: "#e6e6fa",
         borderRadius: 15,
@@ -229,7 +228,7 @@ const styles = StyleSheet.create({
     },
     cardVertImage: {
         flex: 2,
-        width: platformOS === "ios" | "android" ? "100%" : "100%",
+        //width: platformOS === "ios" | "android" ? "100%" : "100%",
         height: platformOS === "ios" | "android" ? 250 : 560,
         borderRadius: 10,
         marginVertical: 10
@@ -252,7 +251,7 @@ const styles = StyleSheet.create({
     cardBoxCard: {
         flexDirection: platformOS === "ios" | "android" ? "column" : "row",
         width: platformOS === "ios" | "android" ? width - 30 : "auto",
-        height: platformOS === "ios" | "android" ? "auto" : "auto",
+        //height: platformOS === "ios" | "android" ? "auto" : "auto",
         borderWidth: 1,
         borderColor: "#e6e6fa",
         borderRadius: 15,
@@ -265,7 +264,7 @@ const styles = StyleSheet.create({
     cardBoxCardText: {
         flexDirection: platformOS === "ios" | "android" ? "column" : "row",
         width: platformOS === "ios" | "android" ? width - 30 : "100%",
-        height: platformOS === "ios" | "android" ? "auto" : "auto",
+        //height: platformOS === "ios" | "android" ? "auto" : "auto",
         justifyContent: "space-evenly",
         alignItems: "center",
         marginVertical: 10,
@@ -275,7 +274,7 @@ const styles = StyleSheet.create({
     cardBoxCardVert: {
         //flexDirection: platformOS === "ios" | "android" ? "column" : "row",
         width: platformOS === "ios" | "android" ? width - 30 : "40%",
-        height: platformOS === "ios" | "android" ? "auto" : "auto",
+        //height: platformOS === "ios" | "android" ? "auto" : "auto",
         borderWidth: 1,
         borderColor: "#e6e6fa",
         borderRadius: 15,

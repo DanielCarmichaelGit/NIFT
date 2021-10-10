@@ -4,14 +4,19 @@ import {
   Dimensions,
   StyleSheet
 } from "react-native"
-import { NavigationContainer } from '@react-navigation/native'
-import { createNativeStackNavigator } from '@react-navigation/native-stack'
-
-const { height, width } = Dimensions.get("window")
-const Stack = createNativeStackNavigator();
 
 import HeaderComponent from "./app/components/header"
 import Main from "./app/components/main"
+import { Navigation } from "react-native-navigation"
+import { } from "react-native-gesture-handler"
+import { createNativeStackNavigator } from "@react-navigation/native-stack"
+import AboutUs from "./app/screens/About"
+
+const { height, width } = Dimensions.get("window")
+const AppNav = createNativeStackNavigator({
+  screen: AboutUs,
+  screen: 
+})
 
 
 export default function App() {
@@ -32,3 +37,4 @@ const styles = StyleSheet.create({
     alignItems: "center",
   }
 })
+
